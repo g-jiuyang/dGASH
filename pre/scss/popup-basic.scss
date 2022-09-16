@@ -23,10 +23,10 @@ $PrimaryB: #F39240;
     max-width: 470px;
     box-sizing: border-box;
     overflow: hidden;
-    padding: calc(4 * var(--font-size)); 
+    padding: calc(4 * var(--font-size));
     margin: auto;
     background-color: #fff;
-    border-radius: calc(1.2 * var(--font-size));
+    border-radius: calc(2.4 * var(--font-size));
     position: fixed;
     top: 50%;
     left: 0;
@@ -79,14 +79,16 @@ $PrimaryB: #F39240;
         max-height: 30vh;
         overflow-y: auto;
         &::-webkit-scrollbar {
-            width: 2px;
+            width: 3px;
+            border-radius: 3px;
         }
         &::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 6px $gray03;
+            background-color: $gray03;
+            border-radius: 3px;
         }
         &::-webkit-scrollbar-thumb {
-            background-color: $gray06;
-            border: 1px $gray06 solid;
+            background-color: $gray05;
+            border-radius: 3px;
         }
         dt{
             flex: 150px;
@@ -126,78 +128,6 @@ $PrimaryB: #F39240;
 
 
 @media screen and (max-width: 768px) {
-    .popup-table{
-        width: 55%;
-        max-height: 590px;
-        button.hide{
-            top: calc(2 * var(--font-size));
-            right: calc(2 * var(--font-size));
-        }
-        .table-header{
-            padding: calc(2.5 * var(--font-size)) calc(2 * var(--font-size)) calc(1 * var(--font-size));
-            .info{
-                .detail{
-                    display: block;
-                    p{
-                        line-height: 1.3;
-                    }
-                }
-                button{
-                    font-size: calc(1.4 * var(--font-size));
-                }
-            }
-            p.desc{
-                font-size: calc(1.4 * var(--font-size));
-            }
-        }
-        .heading-cell, .table-list ul li .item{
-            ul{
-                display: block;
-                li{
-                    &.id, &.number{
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        .heading-cell{
-            display: none;
-        }
-        .table-list{
-            padding-right: calc(.5 * var(--font-size));
-            li{
-                padding: calc(1.6 * var(--font-size)) calc(2 * var(--font-size));
-                border-bottom: 1px $gray03 solid;
-                .item{
-                    display: flex;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    font-size: calc(1.4 * var(--font-size));
-                    li{
-                        display: flex;
-                        align-items: flex-start;
-                        justify-content: flex-start;
-                        margin-bottom: calc(1 * var(--font-size));
-                        &:last-child{
-                            margin-bottom: 0;
-                        }
-                        &.number{
-                            font-weight: 500;
-                        }
-                        span{
-                            width: 75%;
-                            font-weight: normal;
-                            &.title{
-                                display: block;
-                                width: 25%;
-                                font-weight: 500;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
     .popup-basic{
         dl{
             dt{
@@ -209,7 +139,7 @@ $PrimaryB: #F39240;
 }//max-width: 768px
 
 @media screen and (max-width: 428px) {
-    .popup-table{
-        width: 90%;
+    .popup-basic{
+        padding: calc(2.8 * var(--font-size));
     }
 }//max-width: 428px
