@@ -1,0 +1,38 @@
+.page-ontop-desc {
+  width: 50%;
+  max-width: 455px;
+  margin: 0 auto calc(3.8 * var(--font-size));
+}
+
+.page-ontop-desc p {
+  text-align: center;
+}
+
+.page-ontop-desc p.title {
+  margin-bottom: calc(1.8 * var(--font-size));
+  font-size: calc(2.4 * var(--font-size));
+  font-weight: bold;
+}
+
+.page-ontop-desc p.desc {
+  font-size: calc(1.5 * var(--font-size));
+  color: #475467;
+}
+
+.page-ontop-desc p.desc-l {
+  font-size: calc(2 * var(--font-size));
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .page-ontop-desc {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto calc(3 * var(--font-size));
+  }
+  .page-ontop-desc p.title {
+    margin-bottom: calc(1.8 * var(--font-size));
+    font-size: calc(2 * var(--font-size));
+  }
+}
+/*# sourceMappingURL=page-ontop-desc.css.map */

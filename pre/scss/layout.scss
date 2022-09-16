@@ -1,0 +1,213 @@
+$gray01: #FCFCFD;
+$gray02: #F9FAFB;
+$gray03: #F2F4F7;
+$gray04: #E4E7EC;
+$gray05: #D0D5DD;
+$gray06: #98A2B3;
+$gray07: #667085;
+$gray08: #475467;
+$gray09: #344054;
+$gray10: #1D2939;
+$gray11: #101828;
+$Primary: #E7316A;
+
+:root{
+    --font-size: 10px;
+    font-weight: 400;
+}
+body{
+    font-family: 'Inter','Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    color: $gray09;
+    background-color: $gray02;
+    &.hidden{
+        overflow: hidden;
+    }
+}
+#app{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    width: 80%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding-top: calc(11 * var(--font-size));
+    margin: 0 auto;
+    flex: 1;
+}
+
+//按鈕樣式
+a{
+    font-weight: 600;
+    color: $gray09;
+    transition: all .5s;
+    &:hover{
+        transition: all .5s;
+    }
+}
+button{
+    padding: 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s; 
+    &:hover{
+        transition: all .5s;
+    }
+    &[disabled="disabled"] {
+        cursor: default !important;
+        color: $gray06 !important;
+        background-color: $gray03 !important;
+    }
+}
+.cta-btn{
+    color: $gray01;
+    background-color: $gray09;
+    &:hover{
+        background-color: $gray10;
+    }
+}
+.ghost-btn{
+    box-sizing: border-box;
+    color: $gray09;
+    border: 1px $gray05 solid;
+    background-color: #fff;
+    &:hover{
+        background-color: $gray04;
+    }
+}
+h2{
+    margin-bottom: calc(4 * var(--font-size));
+    font-size: calc(2.4 * var(--font-size));
+    font-weight: 600;
+}
+
+//遮屏
+.black-wall{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 24, 40, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+
+@media screen and (max-width: 768px) {
+    main{
+        width: 70%;
+        padding-top: calc(9 * var(--font-size));
+    }
+    .black-wall{
+        z-index: 2;
+    }
+    h2{
+        margin-bottom: calc(3.2 * var(--font-size));
+        font-size: calc(1.8 * var(--font-size));
+    }
+ }//max-width: 768px
+
+ @media screen and (max-width: 428px) {
+    main{
+        width: 90%;
+    }
+ }//max-width: 428px
+
+
+
+
+//index.html
+.layout-key-vision{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .sub-banner{
+        display: none;
+    }
+    &.have-sub-banner{
+        align-items: flex-start;
+        .key-vision-desc{
+            // margin-top: calc(5.5* var(--font-size));
+            p.txt{
+                margin-bottom: calc(4* var(--font-size));
+            }
+        }
+        .sub-banner{
+            display: block;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .layout-key-vision{
+        display: block;
+        margin: 0 auto;
+        &.have-sub-banner{
+            .key-vision-desc{
+                margin-top: 0;
+                p.txt{
+                    margin-bottom: calc(2.8* var(--font-size));
+                }
+            }
+        }
+    }
+}//max-width: 1200px
+
+
+
+
+
+//success.html
+.layout-success-dec{
+    position: relative;
+    &::before, &::after{
+        content: '';
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+    }
+    &::before{
+        width: calc(4* var(--font-size));
+        height: calc(4* var(--font-size));
+        background-image: url(../images/dec-success-dec-before.svg);
+        position: absolute;
+        top: 4vh;
+        left: 10vw;
+        z-index: -1;
+    }
+    &::after{
+        width: calc(5.4* var(--font-size));
+        height: calc(5.4* var(--font-size));
+        background-image: url(../images/dec-success-dec-after.svg);
+        position: absolute;
+        bottom: -5.5vh;
+        right: 15vw;
+        z-index: -1;
+    }
+}
+@media screen and (max-width: 768px) {
+    .layout-success-dec{
+        margin-bottom: calc(8* var(--font-size));
+        &::before{
+            width: calc(2.8* var(--font-size));
+            height: calc(2.8* var(--font-size));
+            top: -1vh;
+            left: 1vw;
+        }
+        &::after{
+            bottom: -5vh;
+            right: -3vw;
+        }
+    }
+}//max-width: 768px
+
+
+
+
+
+
+
+

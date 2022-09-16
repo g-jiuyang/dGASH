@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dGASH</title>
+    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/text-markup.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cookie.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="fixed-top">
+                <div class="content">
+                    <h1 class="brand-logo"><a href="index.html"><img src="images/logo.svg" alt="dGASH"></a></h1>
+                    <div class="account">
+                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
+                         <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
+                        <button @click="openSubMenu"><p>連接錢包</p></button>
+                    </div>
+                    <button class="m-nav-icon" @click="openNav">
+                        <img src="images/icon/ic-m-nav.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <nav>
+                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
+                <ul>
+                    <li><a href="index.html">轉換頁</a></li>
+                    <li><a href="#" target="_blank">轉換教學</a></li>
+                    <li><a href="record.html">轉換紀錄</a></li>
+                    <li><a href="qa.html">常見問題</a></li>
+                </ul>
+            </nav>
+            <div class="subMenu-box">
+                <div class="content">
+                    <div class="subMenu">
+                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
+                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
+                        <ul>
+                            <li><a href="#">登出</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h2>隱私權和Cookie聲明</h2>
+            <section class="text-markup">
+                <p class="desc-m">為了幫助您瞭解樂點股份有限公司是如何蒐集、處理及利用您的個人資料，相關個人資料及隱私保護政策說明如下︰</p>
+                <p class="title">壹、個人資料保護政策</p>
+                <p class="desc">一、 本公司的名稱：樂點股份有限公司<br><br>
+                    二、 個人資料蒐集之目的：<br><br>
+                    編號 內容<br>
+                    040	行銷（包含金控共同行銷業務<br>
+                    067	信用卡、現金卡、轉帳卡或電子票證業務<br>
+                    069	契約、類似契約或其他法律關係事務<br>
+                    090	消費者、客戶管理與服務<br>
+                    098	商業與技術資訊<br>
+                    129	會計與相關服務<br>
+                    135	資（通）訊服務<br>
+                    136	資（通）訊與資料庫管理<br>
+                    137	資通安全與管理<br>
+                    148	網路購物及其他電子商務服務<br>
+                    150	輔助性與後勤支援管理<br>
+                    157	調查、統計與研究分析<br>
+                    173	其他公務機關對目的事業之監督管理<br>
+                    176	其他自然人基於正當性目的所進行個人資料之蒐集處理及利用<br><br>
+                    三、 個人資料蒐集之類別：<br><br>
+                    編號 內容<br>
+                    C001 辨識個人者。如姓名、地址、室內電話號碼、行動電話、即時通帳號、網路平臺申請之帳號、通訊及戶籍地址、電子郵遞地址、提供網路身分認證或申辦查詢服務之紀錄及其他任何可辨識資料本人者等。<br>
+                    C002 辨識財務者。如金融機構帳戶之號碼與姓名、信用卡或簽帳卡之號碼、個人之其他號碼或帳戶等。<br>
+                    C003 政府資料中之辨識者。如身分證統一編號、護照號碼等。<br>
+                    C011 個人描述。如年齡、性別、出生年月日、出生地、國籍、聲音等。<br>
+                    C012 身體描述。如身高、體重、血型等。<br>
+                    C035 休閒活動及興趣。如嗜好、運動及其他興趣等。<br>
+                    C036 生活格調。如使用消費品之種類及服務之細節、個人之消費模式等。<br>
+                    C093 財務交易。如收付金額、支付方式、往來紀錄等。<br>
+                    C102 約定或契約。如關於交易、商業、法律或其他契約、代理等。</p>
+            </section>
+        </main>
+        <footer>
+            <div class="ft-sitemap">
+                <ul>
+                    <li><a href="#">關於GASH</a></li>
+                    <li><a href="#">服務條款</a></li>
+                    <li><a href="privacy.html">隱私權和Cookie聲明</a></li>
+                    <li><a href="#">聯繫客服</a></li>
+                </ul>
+            </div>
+            <p>© 2022 GASH POINT Co., Ltd. All right reserved</p>
+        </footer>
+<!-- 遮屏 -->
+        <section class="black-wall" style="display: none;"></section>   
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data() {
+                return {
+                }
+            },
+            methods: {
+                openSubMenu: function(){
+                    var windowW = window.innerWidth;
+                    if(windowW < 768){
+                        $('.black-wall').show();
+                        $('.subMenu-box').slideToggle();
+                        $('body').toggleClass('hidden');
+                    }else{
+                        $('.subMenu-box').slideToggle();
+                        $('body').toggleClass('hidden');
+                    }
+                },
+                openNav: function(){
+                    var windowW = window.innerWidth;
+                    if(windowW < 768){
+                        $('.black-wall').show();
+                        $('nav').slideToggle();
+                        $('body').toggleClass('hidden');
+                    }else{
+                        $('nav').slideToggle();
+                        $('body').toggleClass('hidden');
+                    }
+                },
+                hideBlackWall: function(){
+                    var windowW = window.innerWidth;
+                    if(windowW < 768){
+                        $('.black-wall').hide();
+                        $('nav').hide();
+                        $('.subMenu-box').hide();
+                        $('body').toggleClass('hidden');
+                    }else{}
+                },
+            },
+        });
+
+        $(document).mouseup(function (e) {
+            var windowW = window.innerWidth;
+            var subMenuBox = $(".subMenu-box");
+            var nav = $("nav");
+            var selectNav = $(".select-nav");
+            var selectrBoxNav = $(".selectr-box-nav");
+            var popupteaching = $(".popup-teaching");
+
+            if (!subMenuBox.is(e.target) && subMenuBox.has(e.target).length === 0 ||
+                !nav.is(e.target) && nav.has(e.target).length === 0 ||
+                !selectNav.is(e.target) && selectNav.has(e.target).length === 0 ||
+                !selectrBoxNav.is(e.target) && selectrBoxNav.has(e.target).length === 0
+            ){
+                subMenuBox.hide();
+                selectNav.hide(); 
+                selectrBoxNav.hide();
+                popupTeaching.hide();
+                $('.black-wall').hide();
+                $('body').removeClass('hidden');
+
+                if(windowW < 768){
+                    nav.hide();
+                }
+            };
+        });
+    </script>
+</body>
+</html>

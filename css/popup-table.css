@@ -1,0 +1,247 @@
+.popup-table {
+  width: 50%;
+  max-width: 550px;
+  max-height: 674px;
+  overflow: hidden;
+  margin: auto;
+  background-color: #fff;
+  border-radius: calc(1.2 * var(--font-size));
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.popup-table button.hide {
+  position: absolute;
+  top: calc(3 * var(--font-size));
+  right: calc(3 * var(--font-size));
+}
+
+.popup-table .table-header {
+  padding: calc(2.7 * var(--font-size)) calc(3.2 * var(--font-size)) calc(1.6 * var(--font-size));
+}
+
+.popup-table .table-header .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: calc(1.4 * var(--font-size));
+}
+
+.popup-table .table-header .info .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: calc(1.3 * var(--font-size));
+}
+
+.popup-table .table-header .info .detail p {
+  font-size: calc(1.6 * var(--font-size));
+  font-weight: bold;
+}
+
+.popup-table .table-header .info .detail p:first-child {
+  margin-right: calc(1 * var(--font-size));
+}
+
+.popup-table .table-header .info button {
+  padding: calc(.4 * var(--font-size)) calc(1.3 * var(--font-size));
+  font-size: calc(1.3 * var(--font-size));
+  font-weight: bold;
+  color: #F9FAFB;
+  background-color: #344054;
+  border-radius: calc(10 * var(--font-size));
+}
+
+.popup-table .table-header .info button:hover {
+  background-color: #1D2939;
+}
+
+.popup-table .table-header p.desc {
+  font-size: calc(1.3 * var(--font-size));
+  color: #667085;
+}
+
+.popup-table .heading-cell ul, .popup-table .table-list ul li .item ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.popup-table .heading-cell ul li.id, .popup-table .table-list ul li .item ul li.id {
+  width: 25%;
+}
+
+.popup-table .heading-cell ul li.number, .popup-table .table-list ul li .item ul li.number {
+  width: 75%;
+}
+
+.popup-table .heading-cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: calc(1.3 * var(--font-size)) calc(3.2 * var(--font-size));
+  font-size: calc(1.5 * var(--font-size));
+  font-weight: 500;
+  background-color: #F2F4F7;
+}
+
+.popup-table .table-list {
+  padding-right: calc(.5 * var(--font-size));
+}
+
+.popup-table .table-list > ul {
+  height: auto;
+  max-height: calc(674px - 102px - 49px);
+  overflow-y: auto;
+}
+
+.popup-table .table-list > ul::-webkit-scrollbar {
+  width: 2px;
+}
+
+.popup-table .table-list > ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #F2F4F7;
+          box-shadow: inset 0 0 6px #F2F4F7;
+}
+
+.popup-table .table-list > ul::-webkit-scrollbar-thumb {
+  background-color: #98A2B3;
+  border: 1px #98A2B3 solid;
+}
+
+.popup-table .table-list li {
+  padding: 0;
+  padding: calc(1.6 * var(--font-size)) calc(3.2 * var(--font-size));
+  border-bottom: 1px #F2F4F7 solid;
+}
+
+.popup-table .table-list li .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: calc(1.3 * var(--font-size));
+}
+
+.popup-table .table-list li .item li {
+  padding: 0;
+  border-bottom: none;
+}
+
+.popup-table .table-list li .item li.number {
+  font-weight: 500;
+}
+
+.popup-table .table-list li .item li span.title {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .popup-table {
+    width: 55%;
+    max-height: 590px;
+  }
+  .popup-table button.hide {
+    top: calc(2 * var(--font-size));
+    right: calc(2 * var(--font-size));
+  }
+  .popup-table .table-header {
+    padding: calc(2.5 * var(--font-size)) calc(2 * var(--font-size)) calc(1 * var(--font-size));
+  }
+  .popup-table .table-header .info .detail {
+    display: block;
+  }
+  .popup-table .table-header .info .detail p {
+    line-height: 1.3;
+  }
+  .popup-table .table-header .info button {
+    font-size: calc(1.4 * var(--font-size));
+  }
+  .popup-table .table-header p.desc {
+    font-size: calc(1.4 * var(--font-size));
+  }
+  .popup-table .heading-cell ul, .popup-table .table-list ul li .item ul {
+    display: block;
+  }
+  .popup-table .heading-cell ul li.id, .popup-table .heading-cell ul li.number, .popup-table .table-list ul li .item ul li.id, .popup-table .table-list ul li .item ul li.number {
+    width: 100%;
+  }
+  .popup-table .heading-cell {
+    display: none;
+  }
+  .popup-table .table-list {
+    padding-right: calc(.5 * var(--font-size));
+  }
+  .popup-table .table-list li {
+    padding: calc(1.6 * var(--font-size)) calc(2 * var(--font-size));
+    border-bottom: 1px #F2F4F7 solid;
+  }
+  .popup-table .table-list li .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: calc(1.4 * var(--font-size));
+  }
+  .popup-table .table-list li .item li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: calc(1 * var(--font-size));
+  }
+  .popup-table .table-list li .item li:last-child {
+    margin-bottom: 0;
+  }
+  .popup-table .table-list li .item li.number {
+    font-weight: 500;
+  }
+  .popup-table .table-list li .item li span {
+    width: 75%;
+    font-weight: normal;
+  }
+  .popup-table .table-list li .item li span.title {
+    display: block;
+    width: 25%;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .popup-table {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=popup-table.css.map */
