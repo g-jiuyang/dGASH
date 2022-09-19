@@ -1,0 +1,170 @@
+$gray01: #FCFCFD;
+$gray02: #F9FAFB;
+$gray03: #F2F4F7;
+$gray04: #E4E7EC;
+$gray05: #D0D5DD;
+$gray06: #98A2B3;
+$gray07: #667085;
+$gray08: #475467;
+$gray09: #344054;
+$gray10: #1D2939;
+$gray11: #101828;
+$Primary: #E7316A;
+
+.invoice-form{
+    width: 100%;
+    max-width: 488px;
+    box-sizing: border-box ;
+    margin: calc(4 * var(--font-size)) auto 0;
+    padding: calc(4 * var(--font-size)) calc(3.2 * var(--font-size));
+    border-radius: calc(1.6 * var(--font-size));
+    background-color: white;
+    box-shadow: 0px 4px 16px rgba(199, 199, 199, 0.25);
+    p.title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(1.6 * var(--font-size));
+        font-weight: 700;
+        margin-bottom: 20px;
+        button{
+            margin-left: calc(.8 * var(--font-size));
+            transition: all .5s;
+            line-height: .6em;
+            &:hover{
+                opacity: .6;
+            }
+        }
+    }
+    .checkbox{
+        padding: calc(2.4 * var(--font-size)) calc(1.6 * var(--font-size));
+        margin-bottom: calc(2.4 * var(--font-size));
+        font-size: calc(1.4 * var(--font-size));
+        background-color: $gray01;
+        border: 1px solid $gray04;
+        border-radius: 16px;
+        position: relative;
+        [type="checkbox"] {
+            display: none;
+            &:checked + label:before {
+                border: $gray09;
+                background-color: $gray09;
+                background-image: url("../images/icon/ic-check-white.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: calc(1.2 * var(--font-size)) auto;
+            }
+        }
+        label{
+            padding-left: calc(2.8 * var(--font-size));
+            background: none;
+            position: relative;
+            display: inline-block;
+            &:before {
+                content: "";
+                display: inline-block;
+                width: calc(1.6 * var(--font-size));
+                height: calc(1.6 * var(--font-size));
+                border-radius: calc( 0.4 * var(--font-size) );
+                border: 1px solid $gray05;
+                position: absolute;
+                top: calc( .2 * var(--font-size));
+                left: 0;
+                cursor: pointer;
+            }
+        }
+    }
+    #donate-select{
+        font-size: calc(1.4 * var(--font-size));
+        line-height: 1.6;
+        color: $gray09;
+        position: relative;
+        span{
+            display: block;
+            background-color: $gray02;
+            border: 1px solid $gray05;
+            border-radius: 24px;
+            padding: 8px 16px;
+            position: relative;
+            cursor: pointer;
+            &:after{
+                content: url(../images/icon/ic-arrow-down.svg);
+                position: absolute;
+                top: 50%;
+                right: 16px;
+                transform: translateY(-50%);
+                transition: all .5s;
+            }
+            +ul{
+                position: absolute;
+                left: 0;
+                right: 0;
+                z-index: 500;
+                overflow-y: hidden;
+                max-height: 0;
+                transition: all .5s;
+                margin-top: 8px;
+                padding: 0 12px;
+                background-color: $gray01;
+                border-radius: 12px;
+                border: 1px transparent solid;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                li{
+                    flex: 100%;
+                    padding: 4px 8px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $gray04;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+        &.open{
+            span{
+                +ul{
+                    height: auto;
+                    max-height: 10em;
+                    padding: 12px;
+                    border-color: $gray05;
+                }
+            }
+        }
+    }
+    a{
+        display: block;
+        width: 100%;
+        padding: calc(1.2 * var(--font-size)) 0;
+        font-size: calc(1.6 * var(--font-size));
+        font-weight: bold;
+        text-align: center;
+        border-radius: calc(10 * var(--font-size));
+        &.cta-btn{
+            margin-bottom: calc(1.5 * var(--font-size));
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .invoice-form{
+        padding: calc(2.4 * var(--font-size));
+        .pd-box{
+            display: block;
+            margin-bottom: calc(4 * var(--font-size));
+        }
+        a{
+            display: block;
+            width: 100%;
+            padding: calc(1.2 * var(--font-size)) 0;
+            font-size: calc(1.6 * var(--font-size));
+            font-weight: bold;
+            text-align: center;
+            border-radius: calc(10 * var(--font-size));
+            &.cta-btn{
+                margin-bottom: calc(1.5 * var(--font-size));
+            }
+        }
+    }
+}//max-width: 768px
