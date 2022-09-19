@@ -1,0 +1,40 @@
+.about-desc {
+  width: calc(50% - 25px);
+  max-width: 520px;
+}
+.about-desc h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #344054;
+}
+.about-desc ul {
+  list-style-type: disc;
+  margin-top: 16px;
+  padding-left: 1em;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: justify;
+}
+.about-desc ul li {
+  margin-bottom: 16px;
+}
+.about-desc ul li span {
+  color: #E7316A;
+}
+
+@media screen and (max-width: 768px) {
+  .about-desc {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    margin-top: 20px;
+  }
+  .about-desc ul {
+    padding-right: 12px;
+  }
+  .about-desc ul li:last-child {
+    margin-bottom: 10px;
+  }
+}
