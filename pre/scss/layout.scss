@@ -208,6 +208,29 @@ h2{
 
 
 
-
-
+//about.html
+.layout-about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 10px;
+    h2{
+        flex: 100%;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: $gray09;
+    }
+}
+@media screen and (max-width: 768px) {
+    .layout-about{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}//max-width: 768px
 
