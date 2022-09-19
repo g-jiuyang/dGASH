@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/sub-banner.css">
     <link rel="stylesheet" href="css/popup-teaching.css">
     <link rel="stylesheet" href="css/popup-basic.css">
+    <link rel="stylesheet" href="css/popup-transfer.css">
     <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cookie.css">
@@ -139,7 +140,7 @@
                         </label>
                     </div>
                     <!-- <button class="btn" :disabled="!agree" @click="viewRecords">轉換</button> -->
-                    <button class="btn" :disabled="!agree" @click="openPopup">轉換</button>
+                    <button class="btn" :disabled="!agree" @click="openPopupTransfer">轉換</button>
                 </section>
                 <section class="sub-banner">
                     <ul>
@@ -206,8 +207,15 @@
             </div>
         </section>
 <!-- basic popup -->
-        <section class="popup-basic" style="display: none;">
-            <button class="hide" @click="hidePopup"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
+        <section class="popup-basic" @click="hidePopup" style="display: none;">
+            <button class="hide"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
+            <p class="title">連接錢包</p>
+            <p class="desc">您即將兌換「<b>XXXXX(商品名稱)</b>」x3 ，一旦兌換成功將扣除帳戶內的蟲蟲幣 <b>4,500</b> 顆。</p>
+            <button class="cta-btn">連接錢包</button>
+        </section>
+<!-- transfer popup -->
+        <section class="popup-transfer" style="display: none;">
+            <button class="hide" @click="hidePopupTransfer"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
             <p class="title">轉換費用確認</p>
             <p class="amount">12,228.00000000000000000<span>TWD</span></p>
             <dl>
@@ -362,6 +370,16 @@
                     $('.popup-basic').show();
                     $('body').addClass('hidden');
                 },
+                hidePopupTransfer: function(){
+                    $('.black-wall').hide();
+                    $('.popup-transfer').hide();
+                    $('body').removeClass('hidden');
+                },
+                openPopupTransfer: function(){
+                    $('.black-wall').show();
+                    $('.popup-transfer').show();
+                    $('body').addClass('hidden');
+                },
             },
         });
 
@@ -373,18 +391,21 @@
             var selectrBoxNav = $(".selectr-box-nav");
             var popupTeaching = $(".popup-teaching");
             var popupBasic = $(".popup-basic");
+            var popupTransfer = $(".popup-transfer");
 
             if (!subMenuBox.is(e.target) && subMenuBox.has(e.target).length === 0 ||
                 !nav.is(e.target) && nav.has(e.target).length === 0 ||
                 !selectNav.is(e.target) && selectNav.has(e.target).length === 0 ||
                 !selectrBoxNav.is(e.target) && selectrBoxNav.has(e.target).length === 0 ||
-                !popupBasic.is(e.target) && popupBasic.has(e.target).length === 0
+                !popupBasic.is(e.target) && popupBasic.has(e.target).length === 0 ||
+                !popupTransfer.is(e.target) && popupTransfer.has(e.target).length === 0
             ){
                 subMenuBox.hide();
                 selectNav.hide(); 
                 selectrBoxNav.hide();
-                // popupTeaching.hide();
+                popupTeaching.hide();
                 popupBasic.hide();
+                popupTransfer.hide();
                 $('.black-wall').hide();
                 $('body').removeClass('hidden');
 

@@ -44,59 +44,6 @@ $PrimaryB: #F39240;
             margin-bottom: calc(2.8 * var(--font-size));
             font-size: calc(1.4 * var(--font-size));
         }
-        &.amount{
-            font-size: calc(2.4 * var(--font-size));
-            line-height: 1.4;
-            font-weight: 700;
-            color: $PrimaryB;
-            margin-bottom: calc(2.8 * var(--font-size));
-            display: inline-block;
-            word-break: break-all;
-            span{
-                display: block;
-                font-size: calc(1.4 * var(--font-size));
-                font-weight: 400;
-                color: $gray11;
-                line-height: 1.6;
-                margin-top: calc(.4 * var(--font-size));
-            }
-        }
-        &.warning{
-            color: $PrimaryB;
-            margin-bottom: calc(.8 * var(--font-size));
-            font-size: calc(1.4 * var(--font-size));
-            font-weight: 700;
-            line-height: 1.6;
-            text-align: center;
-        }
-    }
-    dl{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px 20px;
-        margin-bottom: calc(2.8 * var(--font-size));
-        word-break: break-all;
-        max-height: 30vh;
-        overflow-y: auto;
-        &::-webkit-scrollbar {
-            width: 3px;
-            border-radius: 3px;
-        }
-        &::-webkit-scrollbar-track {
-            background-color: $gray03;
-            border-radius: 3px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: $gray05;
-            border-radius: 3px;
-        }
-        dt{
-            flex: 150px;
-            max-width: 150px;
-        }
-        dd{
-            flex: calc(100% - 205px);
-        }
     }
     button{
         &:hover{
@@ -125,21 +72,3 @@ $PrimaryB: #F39240;
         }
     }
 }
-
-
-@media screen and (max-width: 768px) {
-    .popup-basic{
-        dl{
-            dt{
-                flex: calc(50% - 10px);
-                max-width: calc(50% - 10px);
-            }
-        }
-    }
-}//max-width: 768px
-
-@media screen and (max-width: 428px) {
-    .popup-basic{
-        padding: calc(2.8 * var(--font-size));
-    }
-}//max-width: 428px
