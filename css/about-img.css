@@ -1,1 +1,13 @@
-.about-img{width:calc(50% - 25px);max-width:460px}.about-img img{max-width:100%}@media screen and (max-width: 768px){.about-img{flex:100%}}/*# sourceMappingURL=about-img.css.map */
+.about-img {
+  width: calc(50% - 25px);
+  max-width: 460px;
+}
+.about-img img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-img {
+    flex: 100%;
+  }
+}
