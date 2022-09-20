@@ -44,18 +44,8 @@ $Primary: #E7316A;
         border: 1px solid $gray04;
         border-radius: 16px;
         position: relative;
-        [type="checkbox"] {
-            display: none;
-            &:checked + label:before {
-                border: $gray09;
-                background-color: $gray09;
-                background-image: url("../images/icon/ic-check-white.svg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: calc(1.2 * var(--font-size)) auto;
-            }
-        }
         label{
+            cursor: pointer;
             padding-left: calc(2.8 * var(--font-size));
             background: none;
             position: relative;
@@ -73,12 +63,24 @@ $Primary: #E7316A;
                 cursor: pointer;
             }
         }
+        [type="checkbox"] {
+            display: none;
+            &:checked + label:before {
+                border: $gray09;
+                background-color: $gray09;
+                background-image: url("../images/icon/ic-check-white.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: calc(1.2 * var(--font-size)) auto;
+            }
+        }
     }
-    #donate-select{
+    .selector{
         font-size: calc(1.4 * var(--font-size));
         line-height: 1.6;
         color: $gray09;
         position: relative;
+        margin-top: 8px;
         span{
             display: block;
             background-color: $gray02;
@@ -87,6 +89,7 @@ $Primary: #E7316A;
             padding: 8px 16px;
             position: relative;
             cursor: pointer;
+            color: $gray05;
             &:after{
                 content: url(../images/icon/ic-arrow-down.svg);
                 position: absolute;
@@ -95,42 +98,143 @@ $Primary: #E7316A;
                 transform: translateY(-50%);
                 transition: all .5s;
             }
-            +ul{
+            +div{
                 position: absolute;
                 left: 0;
                 right: 0;
                 z-index: 500;
-                overflow-y: hidden;
-                max-height: 0;
-                transition: all .5s;
                 margin-top: 8px;
                 padding: 0 12px;
                 background-color: $gray01;
                 border-radius: 12px;
-                border: 1px transparent solid;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px;
-                li{
-                    flex: 100%;
-                    padding: 4px 8px;
-                    cursor: pointer;
-                    &:hover{
-                        background-color: $gray04;
-                        border-radius: 4px;
+                ul{
+                    overflow-y: hidden;
+                    max-height: 0;
+                    transition: all .5s;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    li{
+                        flex: 100%;
+                        padding: 4px 8px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $gray04;
+                            border-radius: 4px;
+                        }
                     }
                 }
             }
         }
         &.open{
             span{
-                +ul{
-                    height: auto;
-                    max-height: 10em;
+                +div{
                     padding: 12px;
-                    border-color: $gray05;
+                    padding-right: 5px;
+                    border: 1px solid $gray05;
+                    ul{
+                        padding-right: 4px;
+                        height: auto;
+                        max-height: 10.5em;
+                        overflow-y: auto;
+                        &::-webkit-scrollbar {
+                            width: 3px;
+                            border-radius: 3px;
+                        }
+                        &::-webkit-scrollbar-track {
+                            background-color: $gray03;
+                            border-radius: 3px;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: $gray05;
+                            border-radius: 3px;
+                        }
+                    }
                 }
             }
+        }
+    }
+    #invoice{
+        margin-bottom: 24px;
+        .invoice-type{
+            display: none;
+            flex-wrap: wrap;
+            gap: 0 8px;
+            p{
+                margin-top: 24px;
+                font-size: calc(1.4 * var(--font-size));
+                color: $gray09;
+                flex: 100%;
+                position: relative;
+                button{
+                    margin-left: 8px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-40%);
+                }
+            }
+            input {
+                width: 100%;
+                background-color: $gray02;
+                border: 1px solid $gray05;
+                border-radius: 20px;
+                color: $gray09;
+                padding: 8px 16px;
+                height: 38px;
+                box-sizing: border-box;
+                margin-top: 8px;
+                &:focus{
+                    outline: none;
+                }
+                &::placeholder{
+                    color: $gray05;
+                }
+            }
+            .input-button{
+                flex: 100%;
+                position: relative;
+                input{
+                    margin-top: 0;
+                }
+                button{
+                    position: absolute;
+                    right: 16px;
+                    top: 50%;
+                    transform: translateY(-45%);
+                }
+            }
+            #carrier-select, #county-select, #city-select{
+                width: 100%;
+            }
+            #carrier-select{
+                span{
+                    color: $gray09;
+                }
+            }
+            .carrier-select-content{
+                display: none;
+                &.show{
+                    display: block;
+                }
+            }
+            #county-select{
+                flex: 1;
+            }
+            #city-select{
+                flex: 1.3;
+            }
+            label{
+                margin-top: 8px;
+                color: $gray06;
+                font-size: calc(1.4 * var(--font-size));
+                font-weight: 400;
+            }
+            &.show{
+                display: flex;
+            }
+        }
+        &.hidden{
+            display: none;
         }
     }
     a{
@@ -145,10 +249,34 @@ $Primary: #E7316A;
             margin-bottom: calc(1.5 * var(--font-size));
         }
     }
+    #submit{
+        width: 100%;
+        height: 48px;
+        box-sizing: border-box;
+        border-radius: 24px;
+        color: white;
+        background-color: $gray09;
+        margin-top: 8px;
+        transition: all .5s;
+        font-size: calc(1.6 * var(--font-size));
+        font-weight: 600;
+        &:hover{
+            background-color: darken($gray09,10%);
+        }
+        &:disabled{
+            cursor: default;
+            background-color: $gray03;
+            color: $gray06;
+            &:hover{
+                background-color: $gray03;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
     .invoice-form{
+        -webkit-tap-highlight-color: transparent;
         padding: calc(2.4 * var(--font-size));
         .pd-box{
             display: block;
@@ -164,6 +292,13 @@ $Primary: #E7316A;
             border-radius: calc(10 * var(--font-size));
             &.cta-btn{
                 margin-bottom: calc(1.5 * var(--font-size));
+            }
+        }
+        #invoice{
+            .invoice-type{
+                #county-select, #city-select{
+                    flex: 100%;
+                }
             }
         }
     }
