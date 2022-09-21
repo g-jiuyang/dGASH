@@ -219,7 +219,6 @@ h2{
     h2{
         flex: 100%;
         text-align: center;
-        margin-top: 50px;
         margin-bottom: 0;
         font-size: 24px;
         font-weight: 600;
@@ -231,6 +230,7 @@ h2{
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+        margin-top: 0;
     }
 }//max-width: 768px
 

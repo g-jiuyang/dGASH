@@ -14,6 +14,7 @@ $Primary: #E7316A;
 .about-desc{
     width: calc(50% - 25px);
     max-width: 520px;
+    margin-bottom: 50px;
     h3{
         font-size: 20px;
         font-weight: 600;
@@ -25,7 +26,6 @@ $Primary: #E7316A;
         margin-top: 16px;
         padding-left: 1em;
         font-size: 15px;
-        font-weight: 500;
         line-height: 1.5;
         text-align: justify;
         li{
@@ -48,7 +48,6 @@ $Primary: #E7316A;
         flex: 100%;
         margin-top: 20px;
         ul{
-            padding-right: 12px;
             li{
                 &:last-child{
                     margin-bottom: 10px;
