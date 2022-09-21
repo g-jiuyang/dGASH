@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/qa-list.css">
+    <link rel="stylesheet" href="css/comingsoon-img.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cookie.css">
 </head>
@@ -36,7 +36,7 @@
                     <li><a href="index.html">轉換頁</a></li>
                     <li><a href="#" target="_blank">轉換教學</a></li>
                     <li><a href="record.html">轉換紀錄</a></li>
-                    <li class="active"><a href="qa.html">常見問題</a></li>
+                    <li><a href="qa.html">常見問題</a></li>
                     <li><a href="about.html">關於數位點</a></li>
                 </ul>
             </nav>
@@ -53,16 +53,8 @@
             </div>
         </header>
         <main>
-            <h2>常見問題</h2>
-            <section class="qa-list">
-                <ul>
-                    <template v-for="item,idx in qaList" :key="qa">
-                        <li>
-                            <p class="qa-title" @click="show($event)">{{item.title}}</p>
-                            <p class="qa-desc">{{item.desc}}</p>
-                        </li>
-                    </template>
-                </ul>
+            <section class="comingsoon-img">
+                <img src="images/coming-soon.svg" alt="">
             </section>
         </main>
         <footer>
@@ -86,52 +78,6 @@
             el: '#app',
             data() {
                 return {
-                    qaList: [
-                        {
-                            title: '我可以從哪邊取得「GASH數位點」?',
-                            desc: '目前可以從台灣交易所「幣託」 直接購買「GASH數位點」**Bito Pr交易所為成立於台灣的合法公司(超連結https://www.bitopro.com/users/sign_up?referrer=886551550)',
-                        },
-                        {
-                            title: '如何從本平台將「GASH數位點」或其他加密貨幣轉換為GASH點數?',
-                            desc: '轉換過程只要三步驟，且享有額外優惠，請見「轉換說明」',
-                        },
-                        {
-                            title: '只能接受「GASH數位點」轉換為GASH點數嗎?',
-                            desc: '目前支援「GASH數位點」跟USDT 兩種轉換方式，更多轉換管道正在準備中，陸續開放',
-                        },
-                        {
-                            title: '我可以把GASH點數換回「GASH數位點」或加密貨幣嗎？',
-                            desc: '一旦轉換為GASH點數將無法再次轉換為任何數位點，因此轉換前請務必再三確認。',
-                        },
-                        {
-                            title: '「GASH數位點」是否只能兌換GASH點數?',
-                            desc: '是 ，目前樂點只提供「GASH數位點」進行GASH點數兌換，如有變更再以最新公告為主。',
-                        },
-                        {
-                            title: '「GASH數位點」是否有支援其他場域可以進行兌換?',
-                            desc: '沒有，目前「GASH數位點」只能在樂點指定官方網站進行兌換GASH點數，因此如有遇到其他網站平台提供其他兌換服務時，請注意是否遇到詐騙，並切記請勿提供任何個資，或是傳送「GASH數位點」給對方，以免權益受損，有問題再麻煩與樂點客服聯繫。',
-                        },
-                        {
-                            title: '我的「GASH數位點」可以轉賣嗎？',
-                            desc: '可以至Bito Pro台灣幣託交易所掛單轉賣，或是轉移給其他用戶都是可以的連結(超連結https://www.bitopro.com/users/sign_up?referrer=886551550)',
-                        },
-                        {
-                            title: '「GASH數位點」轉移有什麼規則嗎?',
-                            desc: '將「GASH數位點」在本轉換平台轉移時不會額外扣取費用，但如您是用戶之間互相轉移GASH數位點，每次轉移都會扣取X%的GASH數位點',
-                        },
-                        {
-                            title: '如何確認是不是詐騙？',
-                            desc: '當您懷疑可能遭遇詐騙時，請勿依從他人指示去操作不知名且需要提供個資的網站、自動櫃員機（ATM）、網路銀行，或進行任何可能涉及金錢支付的動作，並請立即撥打 165 反詐騙專線確認，或與樂點的客服聯繫。',
-                        },
-                        {
-                            title: '「GASH數位點」的資安措施為何?',
-                            desc: '「GASH數位點」對所有用戶訊息傳送採取 SSL 加密技術，並且合規ISO27001國際資安規範，保障所有用戶的個資與資產安全。',
-                        },
-                        {
-                            title: '「GASH數位點」是否有銀行履約信託保證?',
-                            desc: '持有「GASH數位點」的用戶，跟原本GASH遊戲點數一樣受銀行履約保證，保障用戶權益。',
-                        },
-                    ],
                 }
             },
             methods: {
@@ -165,11 +111,6 @@
                         $('.subMenu-box').hide();
                         $('body').toggleClass('hidden');
                     }else{}
-                },
-                show: function(e){
-                    const target = e.currentTarget
-                    $(target).siblings('.qa-desc').slideToggle(500);
-                    $(target).toggleClass('action');
                 },
             },
         });

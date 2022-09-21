@@ -68,6 +68,13 @@ button{
         background-color: $gray10;
     }
 }
+.border-btn{
+    border: 1px solid $gray09;
+    &:hover{
+        background-color: $gray10;
+        color: white;
+    }
+}
 .ghost-btn{
     box-sizing: border-box;
     color: $gray09;
@@ -162,6 +169,7 @@ h2{
 //success.html
 .layout-success-dec{
     position: relative;
+    /*
     &::before, &::after{
         content: '';
         display: block;
@@ -187,6 +195,7 @@ h2{
         right: 15vw;
         z-index: -1;
     }
+    */
 }
 @media screen and (max-width: 768px) {
     .layout-success-dec{

@@ -60,6 +60,14 @@ button[disabled=disabled] {
   background-color: #1D2939;
 }
 
+.border-btn {
+  border: 1px solid #344054;
+}
+.border-btn:hover {
+  background-color: #1D2939;
+  color: white;
+}
+
 .ghost-btn {
   box-sizing: border-box;
   color: #344054;
@@ -137,31 +145,33 @@ h2 {
 }
 .layout-success-dec {
   position: relative;
-}
-.layout-success-dec::before, .layout-success-dec::after {
-  content: "";
-  display: block;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-}
-.layout-success-dec::before {
-  width: calc(4 * var(--font-size));
-  height: calc(4 * var(--font-size));
-  background-image: url(../images/dec-success-dec-before.svg);
-  position: absolute;
-  top: 4vh;
-  left: 10vw;
-  z-index: -1;
-}
-.layout-success-dec::after {
-  width: calc(5.4 * var(--font-size));
-  height: calc(5.4 * var(--font-size));
-  background-image: url(../images/dec-success-dec-after.svg);
-  position: absolute;
-  bottom: -5.5vh;
-  right: 15vw;
-  z-index: -1;
+  /*
+  &::before, &::after{
+      content: '';
+      display: block;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+  }
+  &::before{
+      width: calc(4* var(--font-size));
+      height: calc(4* var(--font-size));
+      background-image: url(../images/dec-success-dec-before.svg);
+      position: absolute;
+      top: 4vh;
+      left: 10vw;
+      z-index: -1;
+  }
+  &::after{
+      width: calc(5.4* var(--font-size));
+      height: calc(5.4* var(--font-size));
+      background-image: url(../images/dec-success-dec-after.svg);
+      position: absolute;
+      bottom: -5.5vh;
+      right: 15vw;
+      z-index: -1;
+  }
+  */
 }
 
 @media screen and (max-width: 768px) {
