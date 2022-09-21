@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cookie.css">
 </head>
-<body class="hidden">
+<body>
     <div id="app">
         <header>
             <div class="fixed-top">
@@ -240,7 +240,6 @@
             var nav = $("nav");
             var selectNav = $(".select-nav");
             var selectrBoxNav = $(".selectr-box-nav");
-            var popupTeaching = $(".popup-teaching");
             var popupBasic = $(".popup-basic");
 
             if (!subMenuBox.is(e.target) && subMenuBox.has(e.target).length === 0 ||
@@ -252,7 +251,6 @@
                 subMenuBox.hide();
                 selectNav.hide(); 
                 selectrBoxNav.hide();
-                // popupTeaching.hide();
                 popupBasic.hide();
                 $('.black-wall').hide();
                 $('body').removeClass('hidden');

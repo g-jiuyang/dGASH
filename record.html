@@ -38,6 +38,7 @@
                     <li><a href="#" target="_blank">轉換教學</a></li>
                     <li class="active"><a href="record.html">轉換紀錄</a></li>
                     <li><a href="qa.html">常見問題</a></li>
+                    <li><a href="about.html">關於數位點</a></li>
                 </ul>
             </nav>
             <div class="subMenu-box">
@@ -197,7 +198,7 @@
             <div class="heading-cell">
                 <ul>
                     <li class="id"><span>商品 ID</span></li>
-                    <li class="number"><span>商品序號</span></li>
+                    <li class="number"><span>儲值密碼</span></li>
                 </ul>
             </div>
             <div class="table-list">
@@ -393,17 +394,18 @@
             var nav = $("nav");
             var selectNav = $(".select-nav");
             var selectrBoxNav = $(".selectr-box-nav");
-            var popupteaching = $(".popup-teaching");
+            var popupTable = $('.popup-table');
 
             if (!subMenuBox.is(e.target) && subMenuBox.has(e.target).length === 0 ||
                 !nav.is(e.target) && nav.has(e.target).length === 0 ||
                 !selectNav.is(e.target) && selectNav.has(e.target).length === 0 ||
-                !selectrBoxNav.is(e.target) && selectrBoxNav.has(e.target).length === 0
+                !selectrBoxNav.is(e.target) && selectrBoxNav.has(e.target).length === 0 ||
+                !popupTable.is(e.target) && popupTable.has(e.target).length === 0
             ){
                 subMenuBox.hide();
                 selectNav.hide(); 
                 selectrBoxNav.hide();
-                popupTeaching.hide();
+                popupTable.hide();
                 $('.black-wall').hide();
                 $('body').removeClass('hidden');
 

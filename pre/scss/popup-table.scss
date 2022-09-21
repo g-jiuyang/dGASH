@@ -14,7 +14,7 @@ $Primary: #E7316A;
 .popup-table{
     width: 50%;
     max-width: 550px;
-    max-height: 674px;
+    max-height: 90vh;
     overflow: hidden;
     margin: auto;
     background-color: #fff;
@@ -92,7 +92,7 @@ $Primary: #E7316A;
         padding-right: calc(.5 * var(--font-size));
         > ul{
             height: auto;
-            max-height: calc(674px - 102px - 49px);
+            max-height: calc(90vh - 160px);
             overflow-y: auto;
             &::-webkit-scrollbar {
                 width: 2px;
