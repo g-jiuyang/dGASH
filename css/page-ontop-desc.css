@@ -5,10 +5,10 @@
   text-align: center;
 }
 .page-ontop-desc img {
-  margin-bottom: 43px;
+  margin-bottom: 44px;
 }
 .page-ontop-desc p.title {
-  margin-bottom: calc(1.8 * var(--font-size));
+  margin-bottom: calc(2 * var(--font-size));
   font-size: calc(2.4 * var(--font-size));
   font-weight: bold;
 }
@@ -24,7 +24,7 @@
   display: flex;
   gap: 16px;
   width: 390px;
-  max-width: 100%;
+  max-width: 90%;
   margin: 40px auto 0;
 }
 .page-ontop-desc .btns button {

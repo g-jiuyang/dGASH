@@ -17,11 +17,11 @@ $Primary: #E7316A;
     margin: 10vh auto calc(3.8 * var(--font-size));
     text-align: center;
     img{
-        margin-bottom: 43px;
+        margin-bottom: 44px;
     }
     p{
         &.title{
-            margin-bottom: calc(1.8 * var(--font-size));
+            margin-bottom: calc(2 * var(--font-size));
             font-size: calc(2.4 * var(--font-size));
             font-weight: bold;
         }
@@ -38,7 +38,7 @@ $Primary: #E7316A;
         display: flex;
         gap: 16px;
         width: 390px;
-        max-width: 100%;
+        max-width: 90%;
         margin: 40px auto 0;
         button{
             flex: 1;
