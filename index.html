@@ -521,7 +521,8 @@
         $('#invoice-info-toggle').click(function(){
             $('#invoice-info').toggleClass('open')
             setTimeout(function(){
-                $('.popup-content').scrollTop($('.popup-content').height())
+                // $('.popup-content').scrollTop($('.popup-content').height())
+                $('.popup-content').scrollTop(200)
             }, 65);
         })
 
