@@ -373,6 +373,11 @@ $PrimaryB: #F39240;
         &#viewRecords{
             width: calc(100% - 10px);
         }
+        &[disabled]{
+            background-color: $gray03;
+            color: $gray06;
+            cursor: default;
+        }
     }
 }
 

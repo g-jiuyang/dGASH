@@ -346,6 +346,11 @@
 .popup-transfer button#viewRecords {
   width: calc(100% - 10px);
 }
+.popup-transfer button[disabled] {
+  background-color: #F2F4F7;
+  color: #98A2B3;
+  cursor: default;
+}
 
 @media screen and (max-width: 768px) {
   .popup-transfer dl dt {
