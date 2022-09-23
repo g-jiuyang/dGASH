@@ -256,6 +256,7 @@
   border: 1px solid #D0D5DD;
   border-radius: 20px;
   color: #344054;
+  font-size: calc(1.4 * var(--font-size));
   padding: 8px 16px;
   height: 38px;
   box-sizing: border-box;
@@ -272,6 +273,9 @@
 }
 .popup-transfer .popup-content #invoice .invoice-type input::placeholder {
   color: #D0D5DD;
+}
+.popup-transfer .popup-content #invoice .invoice-type input.warning {
+  border: 1px solid #FC5555;
 }
 .popup-transfer .popup-content #invoice .invoice-type .input-button {
   flex: 100%;
@@ -353,7 +357,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .popup-transfer dl dt {
+  .popup-transfer .popup-content dl dt {
     flex: calc(50% - 10px);
     max-width: calc(50% - 10px);
   }

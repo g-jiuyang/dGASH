@@ -216,7 +216,7 @@
 <!-- transfer popup -->
         <section class="popup-transfer" style="display: none;">
             <button class="hide" @click="hidePopupTransfer"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
-            <p class="title">轉換費用確認</p>
+            <p class="title">轉換資訊確認</p>
             <div class="popup-content">
                 <p class="amount">12,228<span>GASH</span></p>
                 <dl>
@@ -250,7 +250,7 @@
                 </div>
                 <div id="invoice">
                     <div id="invoice-select" class="selector">
-                        <span>請選擇</span>
+                        <span>請選擇發票類型</span>
                         <div>
                             <ul>
                                 <li id="invoice-select-1">我要捐贈</li> 
@@ -280,7 +280,7 @@
                         <input type="text" id="carrier-select-content-2" class="carrier-select-content" placeholder="請輸入手機條碼">
                         <input type="text" id="carrier-select-content-3" class="carrier-select-content" placeholder="請輸入自然憑證條碼">
                         <p>*Email 信箱</p>
-                        <input type="email" placeholder="請輸入Email信箱" required>
+                        <input class="warning" type="email" placeholder="請輸入Email信箱" required>
                         <label>此Email信箱僅供寄送電子發票開立通知使用。</label>
                     </div>
                     <div id="invoice-select-content-3" class="invoice-type">
