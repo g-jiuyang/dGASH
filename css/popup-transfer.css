@@ -370,4 +370,7 @@
   .popup-transfer .popup-content {
     padding-right: calc(0.6 * var(--font-size));
   }
+  .popup-transfer .popup-content #invoice .invoice-type #county-select, .popup-transfer .popup-content #invoice .invoice-type #city-select {
+    flex: 100%;
+  }
 }

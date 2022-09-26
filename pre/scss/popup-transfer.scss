@@ -405,6 +405,13 @@ $PrimaryB: #F39240;
         padding-right: calc(2.2 * var(--font-size));
         .popup-content{
             padding-right: calc(.6 * var(--font-size));
+            #invoice{
+                .invoice-type{
+                    #county-select, #city-select{
+                        flex: 100%;
+                    }
+                }
+            }
         }
     }
 }//max-width: 428px
