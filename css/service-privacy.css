@@ -14,15 +14,6 @@
 }
 .service-privacy dl dt {
   margin-top: calc(1.6 * var(--font-size));
-  padding-left: 2em;
-  text-indent: -2em;
-}
-.service-privacy dl dd {
-  padding-left: 2em;
-}
-.service-privacy dl dd ul {
-  padding-left: 2.5em;
-  text-indent: -3em;
 }
 .service-privacy dl dd ol {
   list-style-type: decimal;

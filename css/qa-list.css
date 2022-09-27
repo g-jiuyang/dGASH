@@ -40,6 +40,13 @@
   font-size: calc(1.5 * var(--font-size));
   color: #475467;
 }
+.qa-list li p.qa-desc a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+.qa-list li p.qa-desc a:hover {
+  color: #E7316A;
+}
 
 @media screen and (max-width: 768px) {
   .qa-list {

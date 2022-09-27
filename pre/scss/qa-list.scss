@@ -50,6 +50,13 @@ $Primary: #E7316A;
             padding: calc(1.6 * var(--font-size)) calc(5 * var(--font-size)) 0 0;
             font-size: calc(1.5 * var(--font-size));
             color: $gray08;
+            a{
+                font-weight: 600;
+                text-decoration: underline;
+                &:hover{
+                    color: $Primary;
+                }
+            }
         }
     }
 }

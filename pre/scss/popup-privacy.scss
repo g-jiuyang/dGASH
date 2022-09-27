@@ -76,20 +76,13 @@ $PrimaryB: #F39240;
         font-size: calc(1.4 * var(--font-size));
         dt{
             margin-top: calc(0.8 * var(--font-size));
-            padding-left: 2em;
-            text-indent: -2em;
         }
         dd{
             text-align: justify;
-            padding-left: 2em;
-            ul{
-                padding-left: 2.5em;
-                text-indent: -3em;
-                ol{
-                    list-style-type: decimal;
-                    text-indent: 0;
-                    padding-left: 1em;
-                }
+            ol{
+                list-style-type: decimal;
+                text-indent: 0;
+                padding-left: 1em;
             }
         }
     }

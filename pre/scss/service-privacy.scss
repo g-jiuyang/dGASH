@@ -36,15 +36,8 @@ $PrimaryB: #F39240;
         margin-bottom: calc(3.6 * var(--font-size));
         dt{
             margin-top: calc(1.6 * var(--font-size));
-            padding-left: 2em;
-            text-indent: -2em;
         }
         dd{
-            padding-left: 2em;
-            ul{
-                padding-left: 2.5em;
-                text-indent: -3em;
-            }
             ol{
                 list-style-type: decimal;
                 padding-left: 1.5em;

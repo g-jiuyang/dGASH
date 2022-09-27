@@ -70,12 +70,6 @@ $PrimaryB: #F39240;
         dd{
             margin-bottom: calc(2.8 * var(--font-size));
             text-align: justify;
-            ul{
-                >li{
-                    padding-left: 2.5em;
-                    text-indent: -3em;
-                }
-            }
             ol{
                 list-style-type: decimal;
                 text-indent: 0;

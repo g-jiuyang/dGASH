@@ -51,10 +51,6 @@
   margin-bottom: calc(2.8 * var(--font-size));
   text-align: justify;
 }
-.popup-service dl dd ul > li {
-  padding-left: 2.5em;
-  text-indent: -3em;
-}
 .popup-service dl dd ol {
   list-style-type: decimal;
   text-indent: 0;

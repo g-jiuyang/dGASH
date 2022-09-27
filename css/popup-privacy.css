@@ -56,18 +56,11 @@
 }
 .popup-privacy dl dt {
   margin-top: calc(0.8 * var(--font-size));
-  padding-left: 2em;
-  text-indent: -2em;
 }
 .popup-privacy dl dd {
   text-align: justify;
-  padding-left: 2em;
 }
-.popup-privacy dl dd ul {
-  padding-left: 2.5em;
-  text-indent: -3em;
-}
-.popup-privacy dl dd ul ol {
+.popup-privacy dl dd ol {
   list-style-type: decimal;
   text-indent: 0;
   padding-left: 1em;
