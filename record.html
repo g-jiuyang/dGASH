@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dGASH</title>
-    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico"/>
+    <title>數位點轉換平台</title>
+    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/header.css">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cookie.css">
 </head>
+
 <body>
     <div id="app">
         <header>
@@ -22,30 +24,32 @@
                 <div class="content">
                     <h1 class="brand-logo"><a href="index.html"><img src="images/logo.svg" alt="dGASH"></a></h1>
                     <div class="account">
-                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
-                         <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
-                        <button @click="openSubMenu"><p>連接錢包</p></button>
+                        <div class="points"><img src="images/icon/ic-GADT.svg">300,000</div>
+                        <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
+                        <button @click="openSubMenu">
+                            <p>連接錢包</p>
+                        </button>
                     </div>
                     <button class="m-nav-icon" @click="openNav">
-                        <img src="images/icon/ic-m-nav.svg" alt="">
+                        <img src="images/icon/ic-m-nav.svg">
                     </button>
                 </div>
             </div>
             <nav>
-                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
+                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg"></button>
                 <ul>
                     <li><a href="index.html">轉換頁</a></li>
                     <li><a href="#" target="_blank">轉換教學</a></li>
                     <li class="active"><a href="record.html">轉換紀錄</a></li>
                     <li><a href="qa.html">常見問題</a></li>
-                    <li><a href="about.html">關於數位點</a></li>
+                    <!-- <li><a href="about.html">關於數位點</a></li> -->
                 </ul>
             </nav>
             <div class="subMenu-box">
                 <div class="content">
                     <div class="subMenu">
-                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
-                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
+                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg"></button>
+                        <div class="points"><img src="images/icon/ic-GADT.svg">300,000</div>
                         <ul>
                             <li><a href="#">登出</a></li>
                         </ul>
@@ -126,7 +130,8 @@
                                     <ul>
                                         <li class="w-m">
                                             <span class="title">單價</span>
-                                            <span class="f-w"><img :src="item.coinImg" alt="" class="dgash">{{item.price}}</span>
+                                            <span class="f-w"><img :src="item.coinImg"
+                                                    class="dgash">{{item.price}}</span>
                                         </li>
                                         <li class="w-sl">
                                             <span class="title">數量</span>
@@ -134,7 +139,8 @@
                                         </li>
                                         <li class="w-m">
                                             <span class="title">總價</span>
-                                            <span class="f-w"><img :src="item.coinImg" alt="" class="dgash">{{item.total}}</span>
+                                            <span class="f-w"><img :src="item.coinImg"
+                                                    class="dgash">{{item.total}}</span>
                                         </li>
                                         <li class="w-s">
                                             <span class="title">狀態</span>
@@ -180,11 +186,11 @@
             </div>
             <p>© 2022 GASH POINT Co., Ltd. All right reserved</p>
         </footer>
-<!-- 遮屏 -->
+        <!-- 遮屏 -->
         <section class="black-wall" style="display: none;"></section>
-<!-- Popup 查看序號 -->
+        <!-- Popup 查看序號 -->
         <section class="popup-table" style="display: none;">
-            <button class="hide" @click="hidePopup"><img src="images/icon/ic-popup-hide.svg" alt=""></button>
+            <button class="hide" @click="hidePopup"><img src="images/icon/ic-popup-hide.svg"></button>
             <div class="table-header">
                 <div class="info">
                     <div class="detail">
@@ -213,7 +219,7 @@
                                     </li>
                                     <li class="number">
                                         <span class="title">商品序號</span>
-                                        <span>{{item.number}}</span>              
+                                        <span>{{item.number}}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -230,12 +236,12 @@
             el: '#app',
             data() {
                 return {
-                    tableList:[
+                    tableList: [
                         {
                             name: 'GASH點數 10,000點',
                             time: '2020/08/04 23:55:22',
                             number: 'GF202208040001',
-                            coinImg: 'images/icon/ic-dGash.svg',
+                            coinImg: 'images/icon/ic-GADT.svg',
                             price: '900,500',
                             amount: '9,999',
                             total: '8,410,500',
@@ -247,7 +253,7 @@
                             name: 'GASH點數 10,000點',
                             time: '2020/08/04 23:55:22',
                             number: 'GF202208040001',
-                            coinImg: 'images/icon/ic-dGash.svg',
+                            coinImg: 'images/icon/ic-GADT.svg',
                             price: '900,500',
                             amount: '9,999',
                             total: '8,410,500',
@@ -259,7 +265,7 @@
                             name: 'GASH點數 10,000點',
                             time: '2020/08/04 23:55:22',
                             number: 'GF202208040001',
-                            coinImg: 'images/icon/ic-dGash.svg',
+                            coinImg: 'images/icon/ic-GADT.svg',
                             price: '900,500',
                             amount: '9,999',
                             total: '8,410,500',
@@ -271,7 +277,7 @@
                             name: 'GASH點數 10,000點',
                             time: '2020/08/04 23:55:22',
                             number: 'GF202208040001',
-                            coinImg: 'images/icon/ic-dGash.svg',
+                            coinImg: 'images/icon/ic-GADT.svg',
                             price: '900,500',
                             amount: '9,999',
                             total: '8,410,500',
@@ -280,56 +286,56 @@
                             TxIDImg: 'images/icon/ic-outlinks-09.svg',
                         },
                     ],
-                    popupTableList:[
+                    popupTableList: [
                         {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
-                        },{
+                        }, {
                             id: '7800309',
                             number: 'ABCDE12345ZXCVBWACEGN',
                         },
@@ -337,54 +343,54 @@
                 }
             },
             methods: {
-                openSubMenu: function(){
+                openSubMenu: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').show();
                         $('.subMenu-box').slideToggle();
                         $('body').toggleClass('hidden');
-                    }else{
+                    } else {
                         $('.subMenu-box').slideToggle();
                         $('body').toggleClass('hidden');
                     }
                 },
-                openNav: function(){
+                openNav: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').show();
                         $('nav').slideToggle();
                         $('body').toggleClass('hidden');
-                    }else{
+                    } else {
                         $('nav').slideToggle();
                         $('body').toggleClass('hidden');
                     }
                 },
-                hideBlackWall: function(){
+                hideBlackWall: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').hide();
                         $('nav').hide();
                         $('.subMenu-box').hide();
                         $('body').toggleClass('hidden');
-                    }else{}
+                    } else { }
                 },
-                openFilter: function(){
+                openFilter: function () {
                     $('.selectr-filter').slideToggle();
                     $('.selectr-pages').hide();
                 },
-                openPages: function(){
+                openPages: function () {
                     $('.selectr-pages').slideToggle();
                     $('.selectr-filter').hide();
                 },
-                openPopup: function(){
+                openPopup: function () {
                     $('.black-wall').show();
                     $('.popup-table').show();
                 },
-                hidePopup: function(){
+                hidePopup: function () {
                     $('.black-wall').hide();
                     $('.popup-table').hide();
                 },
-                
+
             },
         });
 
@@ -401,19 +407,20 @@
                 !selectNav.is(e.target) && selectNav.has(e.target).length === 0 ||
                 !selectrBoxNav.is(e.target) && selectrBoxNav.has(e.target).length === 0 ||
                 !popupTable.is(e.target) && popupTable.has(e.target).length === 0
-            ){
+            ) {
                 subMenuBox.hide();
-                selectNav.hide(); 
+                selectNav.hide();
                 selectrBoxNav.hide();
                 popupTable.hide();
                 $('.black-wall').hide();
                 $('body').removeClass('hidden');
 
-                if(windowW < 768){
+                if (windowW < 768) {
                     nav.hide();
                 }
             };
         });
     </script>
 </body>
+
 </html>

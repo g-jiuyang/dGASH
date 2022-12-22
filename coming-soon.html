@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dGASH</title>
-    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico"/>
+    <title>數位點轉換平台</title>
+    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/header.css">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cookie.css">
 </head>
+
 <body>
     <div id="app">
         <header>
@@ -21,30 +23,32 @@
                 <div class="content">
                     <h1 class="brand-logo"><a href="index.html"><img src="images/logo.svg" alt="dGASH"></a></h1>
                     <div class="account">
-                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
-                         <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
-                        <button @click="openSubMenu"><p>連接錢包</p></button>
+                        <div class="points"><img src="images/icon/ic-dGash.svg">300,000</div>
+                        <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
+                        <button @click="openSubMenu">
+                            <p>連接錢包</p>
+                        </button>
                     </div>
                     <button class="m-nav-icon" @click="openNav">
-                        <img src="images/icon/ic-m-nav.svg" alt="">
+                        <img src="images/icon/ic-m-nav.svg">
                     </button>
                 </div>
             </div>
             <nav>
-                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
+                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg"></button>
                 <ul>
                     <li><a href="index.html">轉換頁</a></li>
                     <li><a href="#" target="_blank">轉換教學</a></li>
                     <li><a href="record.html">轉換紀錄</a></li>
                     <li><a href="qa.html">常見問題</a></li>
-                    <li><a href="about.html">關於數位點</a></li>
+                    <!-- <li><a href="about.html">關於數位點</a></li> -->
                 </ul>
             </nav>
             <div class="subMenu-box">
                 <div class="content">
                     <div class="subMenu">
-                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
-                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
+                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg"></button>
+                        <div class="points"><img src="images/icon/ic-dGash.svg">300,000</div>
                         <ul>
                             <li><a href="#">登出</a></li>
                         </ul>
@@ -54,7 +58,7 @@
         </header>
         <main>
             <section class="comingsoon-img">
-                <img src="images/coming-soon.svg" alt="">
+                <img src="images/coming-soon.svg">
             </section>
         </main>
         <footer>
@@ -68,7 +72,7 @@
             </div>
             <p>© 2022 GASH POINT Co., Ltd. All right reserved</p>
         </footer>
-<!-- 遮屏 -->
+        <!-- 遮屏 -->
         <section class="black-wall" style="display: none;"></section>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -81,36 +85,36 @@
                 }
             },
             methods: {
-                openSubMenu: function(){
+                openSubMenu: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').show();
                         $('.subMenu-box').slideToggle();
                         $('body').toggleClass('hidden');
-                    }else{
+                    } else {
                         $('.subMenu-box').slideToggle();
                         $('body').toggleClass('hidden');
                     }
                 },
-                openNav: function(){
+                openNav: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').show();
                         $('nav').slideToggle();
                         $('body').toggleClass('hidden');
-                    }else{
+                    } else {
                         $('nav').slideToggle();
                         $('body').toggleClass('hidden');
                     }
                 },
-                hideBlackWall: function(){
+                hideBlackWall: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').hide();
                         $('nav').hide();
                         $('.subMenu-box').hide();
                         $('body').toggleClass('hidden');
-                    }else{}
+                    } else { }
                 },
             },
         });
@@ -126,18 +130,19 @@
                 !nav.is(e.target) && nav.has(e.target).length === 0 ||
                 !selectNav.is(e.target) && selectNav.has(e.target).length === 0 ||
                 !selectrBoxNav.is(e.target) && selectrBoxNav.has(e.target).length === 0
-            ){
+            ) {
                 subMenuBox.hide();
-                selectNav.hide(); 
+                selectNav.hide();
                 selectrBoxNav.hide();
                 $('.black-wall').hide();
                 $('body').removeClass('hidden');
 
-                if(windowW < 768){
+                if (windowW < 768) {
                     nav.hide();
                 }
             };
         });
     </script>
 </body>
+
 </html>

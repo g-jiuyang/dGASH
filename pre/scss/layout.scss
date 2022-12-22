@@ -11,25 +11,29 @@ $gray10: #1D2939;
 $gray11: #101828;
 $Primary: #E7316A;
 
-:root{
+:root {
     --font-size: 10px;
     font-weight: 400;
 }
-body{
-    font-family: 'Inter','Noto Sans TC', sans-serif;
+
+body {
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     line-height: 1.6;
     color: $gray09;
     background-color: $gray02;
-    &.hidden{
+
+    &.hidden {
         overflow: hidden;
     }
 }
-#app{
+
+#app {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-main{
+
+main {
     width: 80%;
     max-width: 1200px;
     box-sizing: border-box;
@@ -39,59 +43,70 @@ main{
 }
 
 //按鈕樣式
-a{
+a {
     font-weight: 600;
     color: $gray09;
     transition: all .5s;
-    &:hover{
+
+    &:hover {
         transition: all .5s;
     }
 }
-button{
+
+button {
     padding: 0;
     font-weight: 600;
     cursor: pointer;
-    transition: all .5s; 
-    &:hover{
+    transition: all .5s;
+
+    &:hover {
         transition: all .5s;
     }
-    &[disabled="disabled"] {
+
+    &[disabled] {
         cursor: default !important;
         color: $gray06 !important;
         background-color: $gray03 !important;
     }
 }
-.cta-btn{
+
+.cta-btn {
     color: $gray01;
     background-color: $gray09;
-    &:hover{
+
+    &:hover {
         background-color: $gray10;
     }
 }
-.border-btn{
+
+.border-btn {
     border: 1px solid $gray09;
-    &:hover{
+
+    &:hover {
         background-color: $gray10;
         color: white;
     }
 }
-.ghost-btn{
+
+.ghost-btn {
     box-sizing: border-box;
     color: $gray09;
     border: 1px $gray05 solid;
     background-color: #fff;
-    &:hover{
+
+    &:hover {
         background-color: $gray04;
     }
 }
-h2{
+
+h2 {
     margin-bottom: calc(4 * var(--font-size));
     font-size: calc(2.4 * var(--font-size));
     font-weight: 600;
 }
 
 //遮屏
-.black-wall{
+.black-wall {
     width: 100%;
     height: 100%;
     background-color: rgba(16, 24, 40, 0.7);
@@ -103,71 +118,87 @@ h2{
 
 
 @media screen and (max-width: 768px) {
-    main{
+    main {
         width: 70%;
         padding-top: calc(9 * var(--font-size));
     }
-    .black-wall{
+
+    .black-wall {
         z-index: 2;
     }
-    h2{
+
+    h2 {
         margin-bottom: calc(3.2 * var(--font-size));
         font-size: calc(1.8 * var(--font-size));
     }
- }//max-width: 768px
+}
 
- @media screen and (max-width: 428px) {
-    main{
+//max-width: 768px
+
+@media screen and (max-width: 428px) {
+    main {
         width: 90%;
     }
- }//max-width: 428px
+}
+
+//max-width: 428px
 
 
 
 
 //index.html
-.layout-key-vision{
+.layout-key-vision {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    .sub-banner{
+
+    .sub-banner {
         display: none;
     }
-    &.have-sub-banner{
+
+    &.have-sub-banner {
         align-items: flex-start;
-        .key-vision-desc{
+
+        .key-vision-desc {
+
             // margin-top: calc(5.5* var(--font-size));
-            p.txt{
+            p.txt {
                 margin-bottom: calc(4* var(--font-size));
             }
         }
-        .sub-banner{
+
+        .sub-banner {
             display: block;
         }
     }
 }
+
 @media screen and (max-width: 1200px) {
-    .layout-key-vision{
+    .layout-key-vision {
         display: block;
         margin: 0 auto;
-        &.have-sub-banner{
-            .key-vision-desc{
+
+        &.have-sub-banner {
+            .key-vision-desc {
                 margin-top: 0;
-                p.txt{
+
+                p.txt {
                     margin-bottom: calc(2.8* var(--font-size));
                 }
             }
         }
     }
-}//max-width: 1200px
+}
+
+//max-width: 1200px
 
 
 
 
 
 //success.html
-.layout-success-dec{
+.layout-success-dec {
     position: relative;
     /*
     &::before, &::after{
@@ -197,35 +228,41 @@ h2{
     }
     */
 }
+
 @media screen and (max-width: 768px) {
-    .layout-success-dec{
+    .layout-success-dec {
         margin-bottom: calc(8* var(--font-size));
-        &::before{
+
+        &::before {
             width: calc(2.8* var(--font-size));
             height: calc(2.8* var(--font-size));
             top: -1vh;
             left: 1vw;
         }
-        &::after{
+
+        &::after {
             bottom: -5vh;
             right: -3vw;
         }
     }
-}//max-width: 768px
+}
+
+//max-width: 768px
 
 
 
 
 
 //about.html
-.layout-about{
+.layout-about {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 50px;
     margin-top: 10px;
-    h2{
+
+    h2 {
         flex: 100%;
         text-align: center;
         margin-bottom: 0;
@@ -234,12 +271,14 @@ h2{
         color: $gray09;
     }
 }
+
 @media screen and (max-width: 768px) {
-    .layout-about{
+    .layout-about {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
         margin-top: 0;
     }
-}//max-width: 768px
+}
 
+//max-width: 768px

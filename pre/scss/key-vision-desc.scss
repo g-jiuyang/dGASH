@@ -11,15 +11,17 @@ $gray10: #1D2939;
 $gray11: #101828;
 $Primary: #E7316A;
 
-.key-vision-desc{
+.key-vision-desc {
     width: 50%;
     max-width: 500px;
-    p{
-        &.title{
+
+    p {
+        &.title {
             font-size: calc(6.4 * var(--font-size));
             font-weight: 600;
             position: relative;
-            &::after{
+
+            &::after {
                 content: " ";
                 display: inline-block;
                 width: calc(5.5 * var(--font-size));
@@ -32,19 +34,23 @@ $Primary: #E7316A;
                 z-index: -1;
             }
         }
-        &.subtitle{
+
+        &.subtitle {
             margin-bottom: calc(2.4* var(--font-size));
             font-size: calc(2.4 * var(--font-size));
             font-weight: 600;
         }
-        &.txt{
-            margin-bottom: calc(7.2* var(--font-size));
+
+        &.txt {
+            margin-bottom: calc(3.6* var(--font-size));
             font-size: calc(2 * var(--font-size));
             color: $gray07;
         }
     }
-    a.txt-btn{
+
+    a.txt-btn {
         display: table;
+        margin-bottom: calc(3.6* var(--font-size));
         padding-right: calc(1.8 * var(--font-size));
         font-size: calc(1.4 * var(--font-size));
         font-weight: 400;
@@ -53,12 +59,14 @@ $Primary: #E7316A;
         background-repeat: no-repeat;
         background-position: center right;
         background-size: calc(1.2 * var(--font-size)) auto;
-        &:hover{
+
+        &:hover {
             color: $gray09;
             background-image: url(../images/icon/ic-outlinks-09.svg);
         }
     }
-    a.cta-btn{
+
+    a.cta-btn {
         display: table;
         margin-bottom: calc(2 * var(--font-size));
         padding: calc(1 * var(--font-size)) calc(2.4 * var(--font-size));
@@ -67,128 +75,156 @@ $Primary: #E7316A;
         border-radius: calc(10 * var(--font-size));
         box-shadow: 0px 4px 20px rgba(80, 80, 80, 0.14);
         background: linear-gradient(90deg, #E72E6B 2.33%, #F3973D 95.35%);
-        &:hover{
+
+        &:hover {
             background: linear-gradient(90deg, #c72c5f, #d8893a);
         }
     }
 }
 
-@media screen and (min-width:1201px) and (max-width:1350px){
-    .key-vision-desc{
+@media screen and (min-width:1201px) and (max-width:1350px) {
+    .key-vision-desc {
         width: calc(100% - 540px - calc(4* var(--font-size)));
-        p{
-            &.title{
+
+        p {
+            &.title {
                 font-size: calc(4.6 * var(--font-size));
             }
-            &.subtitle{
+
+            &.subtitle {
                 font-size: calc(2 * var(--font-size));
             }
-            &.txt{
+
+            &.txt {
                 font-size: calc(2 * var(--font-size));
             }
         }
-        a{
-            &.cta-btn{
+
+        a {
+            &.cta-btn {
                 padding: calc(.8 * var(--font-size)) calc(2 * var(--font-size));
                 font-size: calc(1.8 * var(--font-size));
             }
         }
     }
-}//width:1201px-1350px
+}
 
-@media screen and (min-width:769px) and (max-width:1200px){
-    .key-vision-desc{
+//width:1201px-1350px
+
+@media screen and (min-width:769px) and (max-width:1200px) {
+    .key-vision-desc {
         width: 90%;
         max-width: 90%;
         margin: 0 auto calc(4.6* var(--font-size));
-        p{
-            &.title{
+
+        p {
+            &.title {
                 margin-bottom: calc(1* var(--font-size));
                 font-size: calc(6 * var(--font-size));
                 text-align: center;
-                &::after{
+
+                &::after {
                     display: none;
                 }
             }
-            &.subtitle{
+
+            &.subtitle {
                 font-size: calc(2.4 * var(--font-size));
                 text-align: center;
             }
-            &.txt{
+
+            &.txt {
                 margin-bottom: calc(5* var(--font-size));
                 font-size: calc(2.4 * var(--font-size));
                 text-align: center;
             }
         }
-        a{
+
+        a {
             margin: 0 auto;
-            a.cta-btn{
+
+            a.cta-btn {
                 padding: calc(.8 * var(--font-size)) calc(2 * var(--font-size));
                 font-size: calc(2 * var(--font-size));
             }
         }
     }
-}///width:769px-1200px
+}
+
+///width:769px-1200px
 
 @media screen and (max-width: 768px) {
-    .key-vision-desc{
+    .key-vision-desc {
         width: 100%;
         max-width: 100%;
         margin: 0 auto calc(4.6* var(--font-size));
-        p{
+
+        p {
             text-align: center;
-            &.title{
+
+            &.title {
                 font-size: calc(4.6 * var(--font-size));
-                &::after{
+
+                &::after {
                     display: none;
                 }
             }
-            &.txt{
+
+            &.txt {
                 margin-bottom: calc(5* var(--font-size));
                 font-size: calc(2 * var(--font-size));
             }
         }
-        a{
+
+        a {
             margin: 0 auto;
-            &.cta-btn{
+
+            &.cta-btn {
                 padding: calc(.8 * var(--font-size)) calc(2 * var(--font-size));
                 font-size: calc(1.8 * var(--font-size));
             }
         }
     }
-}//max-width: 768px
+}
+
+//max-width: 768px
 
 @media screen and (max-width: 428px) {
-    .key-vision-desc{
+    .key-vision-desc {
         width: 90%;
         max-width: 90%;
         margin: 0 auto calc(3.6* var(--font-size));
-        p{
-            &.title{
+
+        p {
+            &.title {
                 font-size: calc(2 * var(--font-size));
                 text-align: center;
-                &::after{
+
+                &::after {
                     display: none;
                 }
             }
-            &.subtitle{
+
+            &.subtitle {
                 margin-bottom: calc(1.6 * var(--font-size));
                 font-size: calc(1.6 * var(--font-size));
             }
-            &.txt{
+
+            &.txt {
                 margin-bottom: calc(2.8 * var(--font-size));
                 font-size: calc(1.6 * var(--font-size));
                 text-align: center;
             }
         }
-        a{
-            &.cta-btn{
+
+        a {
+            &.cta-btn {
                 margin-bottom: calc(1.2 * var(--font-size));
                 padding: calc(.8 * var(--font-size)) calc(2.4 * var(--font-size));
                 font-size: calc(1.6 * var(--font-size));
             }
         }
     }
-}//max-width: 428px
+}
 
-
+//max-width: 428px

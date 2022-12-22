@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dGASH</title>
-    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico"/>
+    <title>數位點轉換平台</title>
+    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/header.css">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cookie.css">
 </head>
+
 <body>
     <div id="app">
         <header>
@@ -21,30 +23,32 @@
                 <div class="content">
                     <h1 class="brand-logo"><a href="index.html"><img src="images/logo.svg" alt="dGASH"></a></h1>
                     <div class="account">
-                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
-                         <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
-                        <button @click="openSubMenu"><p>連接錢包</p></button>
+                        <div class="points"><img src="images/icon/ic-dGash.svg">300,000</div>
+                        <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
+                        <button @click="openSubMenu">
+                            <p>連接錢包</p>
+                        </button>
                     </div>
                     <button class="m-nav-icon" @click="openNav">
-                        <img src="images/icon/ic-m-nav.svg" alt="">
+                        <img src="images/icon/ic-m-nav.svg">
                     </button>
                 </div>
             </div>
             <nav>
-                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
+                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg"></button>
                 <ul>
                     <li><a href="index.html">轉換頁</a></li>
                     <li><a href="#" target="_blank">轉換教學</a></li>
                     <li><a href="record.html">轉換紀錄</a></li>
                     <li class="active"><a href="qa.html">常見問題</a></li>
-                    <li><a href="about.html">關於數位點</a></li>
+                    <!-- <li><a href="about.html">關於數位點</a></li> -->
                 </ul>
             </nav>
             <div class="subMenu-box">
                 <div class="content">
                     <div class="subMenu">
-                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
-                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
+                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg"></button>
+                        <div class="points"><img src="images/icon/ic-dGash.svg">300,000</div>
                         <ul>
                             <li><a href="#">登出</a></li>
                         </ul>
@@ -76,7 +80,7 @@
             </div>
             <p>© 2022 GASH POINT Co., Ltd. All right reserved</p>
         </footer>
-<!-- 遮屏 -->
+        <!-- 遮屏 -->
         <section class="black-wall" style="display: none;"></section>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -89,15 +93,15 @@
                     qaList: [
                         {
                             title: '我可以從哪邊取得「GASH數位點」?',
-                            desc: '目前可以從台灣交易所「幣託」 直接購買「GASH數位點」**Bito Pr交易所為成立於台灣的合法公司(超連結https://www.bitopro.com/users/sign_up?referrer=886551550)',
+                            desc: '目前可以從台灣交易所「幣託」 直接購買「GASH數位點」<a href="https://www.bitopro.com/users/sign_up?referrer=886551550" target="_blank">BitoPro交易所</a>為成立於台灣的合法公司。',
                         },
                         {
                             title: '如何從本平台將「GASH數位點」或其他加密貨幣轉換為GASH點數?',
-                            desc: '轉換過程只要三步驟，且享有額外優惠，請見「轉換說明」',
+                            desc: '轉換過程只要三步驟，且享有額外優惠，請見「轉換說明」。',
                         },
                         {
                             title: '只能接受「GASH數位點」轉換為GASH點數嗎?',
-                            desc: '目前支援「GASH數位點」跟USDT 兩種轉換方式，更多轉換管道正在準備中，陸續開放',
+                            desc: '目前支援「GASH數位點」跟USDT 兩種轉換方式，更多轉換管道正在準備中，陸續開放。',
                         },
                         {
                             title: '我可以把GASH點數換回「GASH數位點」或加密貨幣嗎？',
@@ -113,11 +117,11 @@
                         },
                         {
                             title: '我的「GASH數位點」可以轉賣嗎？',
-                            desc: '可以至Bito Pro台灣幣託交易所掛單轉賣，或是轉移給其他用戶都是可以的連結(超連結https://www.bitopro.com/users/sign_up?referrer=886551550)',
+                            desc: '可以至<a href="https://www.bitopro.com/users/sign_up?referrer=886551550" target="_blank">BitoPro交易所</a>掛單轉賣，或是轉移給其他用戶都是可以的連結。',
                         },
                         {
                             title: '「GASH數位點」轉移有什麼規則嗎?',
-                            desc: '將「GASH數位點」在本轉換平台轉移時不會額外扣取費用，但如您是用戶之間互相轉移GASH數位點，每次轉移都會扣取X%的GASH數位點',
+                            desc: '將「GASH數位點」在本轉換平台轉移時不會額外扣取費用，但如您是用戶之間互相轉移GASH數位點，每次轉移都會扣取X%的GASH數位點。',
                         },
                         {
                             title: '如何確認是不是詐騙？',
@@ -135,38 +139,38 @@
                 }
             },
             methods: {
-                openSubMenu: function(){
+                openSubMenu: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').show();
                         $('.subMenu-box').slideToggle();
                         $('body').toggleClass('hidden');
-                    }else{
+                    } else {
                         $('.subMenu-box').slideToggle();
                         $('body').toggleClass('hidden');
                     }
                 },
-                openNav: function(){
+                openNav: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').show();
                         $('nav').slideToggle();
                         $('body').toggleClass('hidden');
-                    }else{
+                    } else {
                         $('nav').slideToggle();
                         $('body').toggleClass('hidden');
                     }
                 },
-                hideBlackWall: function(){
+                hideBlackWall: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').hide();
                         $('nav').hide();
                         $('.subMenu-box').hide();
                         $('body').toggleClass('hidden');
-                    }else{}
+                    } else { }
                 },
-                show: function(e){
+                show: function (e) {
                     const target = e.currentTarget
                     $(target).siblings('.qa-desc').slideToggle(500);
                     $(target).toggleClass('action');
@@ -185,18 +189,19 @@
                 !nav.is(e.target) && nav.has(e.target).length === 0 ||
                 !selectNav.is(e.target) && selectNav.has(e.target).length === 0 ||
                 !selectrBoxNav.is(e.target) && selectrBoxNav.has(e.target).length === 0
-            ){
+            ) {
                 subMenuBox.hide();
-                selectNav.hide(); 
+                selectNav.hide();
                 selectrBoxNav.hide();
                 $('.black-wall').hide();
                 $('body').removeClass('hidden');
 
-                if(windowW < 768){
+                if (windowW < 768) {
                     nav.hide();
                 }
             };
         });
     </script>
 </body>
+
 </html>

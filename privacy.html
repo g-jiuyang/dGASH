@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dGASH</title>
-    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico"/>
+    <title>數位點轉換平台</title>
+    <link rel="icon" href="images/favicon.ico" type="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/header.css">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cookie.css">
 </head>
+
 <body>
     <div id="app">
         <header>
@@ -21,30 +23,32 @@
                 <div class="content">
                     <h1 class="brand-logo"><a href="index.html"><img src="images/logo.svg" alt="dGASH"></a></h1>
                     <div class="account">
-                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
-                         <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
-                        <button @click="openSubMenu"><p>連接錢包</p></button>
+                        <div class="points"><img src="images/icon/ic-dGash.svg">300,000</div>
+                        <!-- 成功連接錢包後，請於 button > p 內放入錢包帳號 -->
+                        <button @click="openSubMenu">
+                            <p>連接錢包</p>
+                        </button>
                     </div>
                     <button class="m-nav-icon" @click="openNav">
-                        <img src="images/icon/ic-m-nav.svg" alt="">
+                        <img src="images/icon/ic-m-nav.svg">
                     </button>
                 </div>
             </div>
             <nav>
-                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
+                <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg"></button>
                 <ul>
                     <li><a href="index.html">轉換頁</a></li>
                     <li><a href="#" target="_blank">轉換教學</a></li>
                     <li><a href="record.html">轉換紀錄</a></li>
                     <li><a href="qa.html">常見問題</a></li>
-                    <li><a href="about.html">關於數位點</a></li>
+                    <!-- <li><a href="about.html">關於數位點</a></li> -->
                 </ul>
             </nav>
             <div class="subMenu-box">
                 <div class="content">
                     <div class="subMenu">
-                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg" alt=""></button>
-                        <div class="points"><img src="images/icon/ic-dGash.svg" alt="">300,000</div>
+                        <button class="hide" @click="hideBlackWall"><img src="images/icon/ic-m-nav-hide.svg"></button>
+                        <div class="points"><img src="images/icon/ic-dGash.svg">300,000</div>
                         <ul>
                             <li><a href="#">登出</a></li>
                         </ul>
@@ -80,7 +84,8 @@
                     <dt>三、個人資料蒐集之類別：</dt>
                     <dd>
                         編號 內容<br>
-                        C001 辨識個人者。如姓名、地址、室內電話號碼、行動電話、即時通帳號、網路平臺申請之帳號、通訊及戶籍地址、電子郵遞地址、提供網路身分認證或申辦查詢服務之紀錄及其他任何可辨識資料本人者等。<br>
+                        C001
+                        辨識個人者。如姓名、地址、室內電話號碼、行動電話、即時通帳號、網路平臺申請之帳號、通訊及戶籍地址、電子郵遞地址、提供網路身分認證或申辦查詢服務之紀錄及其他任何可辨識資料本人者等。<br>
                         C002 辨識財務者。如金融機構帳戶之號碼與姓名、信用卡或簽帳卡之號碼、個人之其他號碼或帳戶等。<br>
                         C003 政府資料中之辨識者。如身分證統一編號、護照號碼等。<br>
                         C011 個人描述。如年齡、性別、出生年月日、出生地、國籍、聲音等。<br>
@@ -113,7 +118,8 @@
                                 （二）行使方式：
                                 <ol>
                                     <li>聯繫樂點客服中心gashex@gashpoint.com提出申請。</li>
-                                    <li>樂點將依據您提出可資確認的身分證明文件申請，於法定期間內履行上述義務，但將留下相關文件以資佐證。若您委託他人代為申請者，請另外提出可資確認的身分證明，以備查核。若您申請查詢或請求閱覽個人資料或製給複製本，樂點得酌收相當費用。收費將依樂點所規定的標準辦理。若樂點未能於法定期間內處理您的申請，將會將原因以書面方式告知與您知悉。您亦可在樂點網站的「會員中心」網頁登入您的帳號及密碼，線上即時查閱您的個人資料檔案。若您委託他人代為登入者，您將負完全的責任。</li>
+                                    <li>樂點將依據您提出可資確認的身分證明文件申請，於法定期間內履行上述義務，但將留下相關文件以資佐證。若您委託他人代為申請者，請另外提出可資確認的身分證明，以備查核。若您申請查詢或請求閱覽個人資料或製給複製本，樂點得酌收相當費用。收費將依樂點所規定的標準辦理。若樂點未能於法定期間內處理您的申請，將會將原因以書面方式告知與您知悉。您亦可在樂點網站的「會員中心」網頁登入您的帳號及密碼，線上即時查閱您的個人資料檔案。若您委託他人代為登入者，您將負完全的責任。
+                                    </li>
                                 </ol>
                             </li>
                         </ul>
@@ -122,7 +128,8 @@
                 </dl>
                 <p class="title">貳、隱私權保護政策</p>
                 <dl>
-                    <dt>一、您於樂點網站所登錄或留存的個人資料，係由樂點網站蒐集、處理、利用，在未獲得您的同意以前，絕不對樂點關係企業或相關業務合作夥伴(以下稱「樂點相關業務合作夥伴」)以外的第三人任意揭露您的姓名、地址、電子郵件地址及其他依法受保護的個人資料。但下列情形不在此限：</dt>
+                    <dt>一、您於樂點網站所登錄或留存的個人資料，係由樂點網站蒐集、處理、利用，在未獲得您的同意以前，絕不對樂點關係企業或相關業務合作夥伴(以下稱「樂點相關業務合作夥伴」)以外的第三人任意揭露您的姓名、地址、電子郵件地址及其他依法受保護的個人資料。但下列情形不在此限：
+                    </dt>
                     <dd>
                         <ul>
                             <li>（一）司法或vup y警察機關偵查犯罪需要時。</li>
@@ -131,8 +138,10 @@
                             <li>（四）於維護公益或保護本公司或他人權利。</li>
                         </ul>
                     </dd>
-                    <dt>二、為提供本服務行銷、市場分析、統計或研究、或為提供會員個人化服務或加值服務之目的，您同意本公司及關係企業、本公司相關業務夥伴，得記錄、保存及利用您在本網站所留存或產生的資料及記錄，並得將您的資料及記錄提供予關係企業或相關業務夥伴，同時在不揭露各該資料的情形下，得公開或使用統計資料。</dt>
-                    <dt>三、樂點網站會記錄使用者上站的IP位址、及在網站內瀏覽活動等資料，但這些資料僅供樂點、其各子公司及樂點相關業務夥伴內部作網站流量和網路行為調查的總量分析，利於提昇網站的服務品質，同時在不揭露各該資料的情形下，公開或使用統計資料。</dt>
+                    <dt>二、為提供本服務行銷、市場分析、統計或研究、或為提供會員個人化服務或加值服務之目的，您同意本公司及關係企業、本公司相關業務夥伴，得記錄、保存及利用您在本網站所留存或產生的資料及記錄，並得將您的資料及記錄提供予關係企業或相關業務夥伴，同時在不揭露各該資料的情形下，得公開或使用統計資料。
+                    </dt>
+                    <dt>三、樂點網站會記錄使用者上站的IP位址、及在網站內瀏覽活動等資料，但這些資料僅供樂點、其各子公司及樂點相關業務夥伴內部作網站流量和網路行為調查的總量分析，利於提昇網站的服務品質，同時在不揭露各該資料的情形下，公開或使用統計資料。
+                    </dt>
                     <dt>四、除符合下列情形之一，樂點不得將個人資料進行前述特定目的外之利用：</dt>
                     <dd>
                         <ul>
@@ -143,7 +152,8 @@
                             <li>（五）經當事人書面同意。</li>
                         </ul>
                     </dd>
-                    <dt>五、為了便利使用者的網頁瀏覽及操作，樂點網站可能使用Cookie技術或其他類似技術，以提供更適合使用者個人需要的服務。Cookie是網站伺服器用來和使用者瀏覽器進行溝通的一種技術，它可能在使用者的電腦中儲存某些資訊。使用者可以經由瀏覽器的設定，取消或限制此項功能。</dt>
+                    <dt>五、為了便利使用者的網頁瀏覽及操作，樂點網站可能使用Cookie技術或其他類似技術，以提供更適合使用者個人需要的服務。Cookie是網站伺服器用來和使用者瀏覽器進行溝通的一種技術，它可能在使用者的電腦中儲存某些資訊。使用者可以經由瀏覽器的設定，取消或限制此項功能。
+                    </dt>
                     <dt>六、為了保障你的隱私與安全，您的帳號資料由樂點網站現行通行標準的SSL通訊加密系統，保障資料傳送的安全。</dt>
                     <dt>七、樂點相關網站或網頁可能包含其他網站或網頁的連結。對於此等不屬於樂點網站的網站或網頁，其內容或隱私權政策，均與樂點網站無關。</dt>
                     <dt>八、樂點於個人資料於蒐集、處理及利用時，皆尊重當事人之權益，依誠實及信用方法為之，且在被規範之特定目的範圍內，最小化處理及利用個人資料。</dt>
@@ -163,8 +173,8 @@
             </div>
             <p>© 2022 GASH POINT Co., Ltd. All right reserved</p>
         </footer>
-<!-- 遮屏 -->
-        <section class="black-wall" style="display: none;"></section>   
+        <!-- 遮屏 -->
+        <section class="black-wall" style="display: none;"></section>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/vue.min.js"></script>
@@ -176,36 +186,36 @@
                 }
             },
             methods: {
-                openSubMenu: function(){
+                openSubMenu: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').show();
                         $('.subMenu-box').slideToggle();
                         $('body').toggleClass('hidden');
-                    }else{
+                    } else {
                         $('.subMenu-box').slideToggle();
                         $('body').toggleClass('hidden');
                     }
                 },
-                openNav: function(){
+                openNav: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').show();
                         $('nav').slideToggle();
                         $('body').toggleClass('hidden');
-                    }else{
+                    } else {
                         $('nav').slideToggle();
                         $('body').toggleClass('hidden');
                     }
                 },
-                hideBlackWall: function(){
+                hideBlackWall: function () {
                     var windowW = window.innerWidth;
-                    if(windowW < 768){
+                    if (windowW < 768) {
                         $('.black-wall').hide();
                         $('nav').hide();
                         $('.subMenu-box').hide();
                         $('body').toggleClass('hidden');
-                    }else{}
+                    } else { }
                 },
             },
         });
@@ -222,19 +232,20 @@
                 !nav.is(e.target) && nav.has(e.target).length === 0 ||
                 !selectNav.is(e.target) && selectNav.has(e.target).length === 0 ||
                 !selectrBoxNav.is(e.target) && selectrBoxNav.has(e.target).length === 0
-            ){
+            ) {
                 subMenuBox.hide();
-                selectNav.hide(); 
+                selectNav.hide();
                 selectrBoxNav.hide();
                 popupTeaching.hide();
                 $('.black-wall').hide();
                 $('body').removeClass('hidden');
 
-                if(windowW < 768){
+                if (windowW < 768) {
                     nav.hide();
                 }
             };
         });
     </script>
 </body>
+
 </html>

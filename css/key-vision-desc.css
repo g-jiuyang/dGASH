@@ -25,12 +25,13 @@
   font-weight: 600;
 }
 .key-vision-desc p.txt {
-  margin-bottom: calc(7.2 * var(--font-size));
+  margin-bottom: calc(3.6 * var(--font-size));
   font-size: calc(2 * var(--font-size));
   color: #667085;
 }
 .key-vision-desc a.txt-btn {
   display: table;
+  margin-bottom: calc(3.6 * var(--font-size));
   padding-right: calc(1.8 * var(--font-size));
   font-size: calc(1.4 * var(--font-size));
   font-weight: 400;

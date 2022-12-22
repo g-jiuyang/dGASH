@@ -46,7 +46,7 @@ button {
 button:hover {
   transition: all 0.5s;
 }
-button[disabled=disabled] {
+button[disabled] {
   cursor: default !important;
   color: #98A2B3 !important;
   background-color: #F2F4F7 !important;
